@@ -1,10 +1,8 @@
 # SmartInvest سرمایه گذاری هوشمند
 
 <img width="1024" height="1024" alt="9f3d5c26-4fa9-4670-af84-8e7e43ffd189" src="https://github.com/user-attachments/assets/6301f5bb-941f-4d8b-a74e-d031e2242293" />
-![Uploading ChatGPT Image Aug 21, 2025, 03_10_15 PM.png…]()
 
-
-# Clean Architecture Solution Template
+# SmartInvest Project
 
 [![Build](https://github.com/jasontaylordev/CleanArchitecture/actions/workflows/build.yml/badge.svg)](https://github.com/jasontaylordev/CleanArchitecture/actions/workflows/build.yml)
 [![CodeQL](https://github.com/jasontaylordev/CleanArchitecture/actions/workflows/codeql.yml/badge.svg)](https://github.com/jasontaylordev/CleanArchitecture/actions/workflows/codeql.yml)
@@ -12,7 +10,8 @@
 [![Nuget](https://img.shields.io/nuget/dt/Clean.Architecture.Solution.Template?label=Downloads)](https://www.nuget.org/packages/Clean.Architecture.Solution.Template)
 ![Twitter Follow](https://img.shields.io/twitter/follow/jasontaylordev?label=Follow&style=social)
 
-The goal of this template is to provide a straightforward and efficient approach to enterprise application development, leveraging the power of Clean Architecture and ASP.NET Core. Using this template, you can effortlessly create a Single Page App (SPA) with ASP.NET Core and Angular or React, while adhering to the principles of Clean Architecture. Getting started is easy - simply install the **.NET template** (see below for full details).
+The goal of this template is to provide a straightforward and efficient approach to enterprise application development, leveraging the power of Clean Architecture and ASP.NET Core.
+ Using this template, you can effortlessly create a Single Page App (SPA) with ASP.NET Core and Angular or React, while adhering to the principles of Clean Architecture. Getting started is easy - simply install the **.NET template** (see below for full details).
 
 If you find this project useful, please give it a star. Thanks! ⭐
 
@@ -21,88 +20,10 @@ If you find this project useful, please give it a star. Thanks! ⭐
 The following prerequisites are required to build and run the solution:
 
 - [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) (latest version)
-- [Node.js](https://nodejs.org/) (latest LTS, only required if you are using Angular or React)
-
-The easiest way to get started is to install the [.NET template](https://www.nuget.org/packages/Clean.Architecture.Solution.Template):
-```
-dotnet new install Clean.Architecture.Solution.Template
 ```
 
 Once installed, create a new solution using the template. You can choose to use Angular, React, or create a Web API-only solution. Specify the client framework using the `-cf` or `--client-framework` option, and provide the output directory where your project will be created. Here are some examples:
 
-To create a Single-Page Application (SPA) with Angular and ASP.NET Core:
-```bash
-dotnet new ca-sln --client-framework Angular --output YourProjectName
-```
-
-To create a SPA with React and ASP.NET Core:
-```bash
-dotnet new ca-sln -cf React -o YourProjectName
-```
-
-To create a ASP.NET Core Web API-only solution:
-```bash
-dotnet new ca-sln -cf None -o YourProjectName
-```
-
-Launch the app:
-```bash
-cd src/Web
-dotnet run
-```
-
-To learn more, run the following command:
-```bash
-dotnet new ca-sln --help
-```
-
-You can create use cases (commands or queries) by navigating to `./src/Application` and running `dotnet new ca-usecase`. Here are some examples:
-
-To create a new command:
-```bash
-dotnet new ca-usecase --name CreateTodoList --feature-name TodoLists --usecase-type command --return-type int
-```
-
-To create a query:
-```bash
-dotnet new ca-usecase -n GetTodos -fn TodoLists -ut query -rt TodosVm
-```
-
-To learn more, run the following command:
-```bash
-dotnet new ca-usecase --help
-```
-
-## Database
-
-The template supports [PostgreSQL](https://www.postgresql.org), [SQLite](https://www.sqlite.org/), and [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/what-is-sql-server) (default option). Specify the database to use with the `--database` option:
-
-```bash
-dotnet new ca-sln --database [postgresql|sqlite|sqlserver]
-```
-
-On application startup, the database is automatically **deleted**, **recreated**, and **seeded** using `ApplicationDbContextInitialiser`. This is a practical strategy for early development, avoiding the overhead of maintaining migrations while keeping the schema and sample data in sync with the domain model.
-
-This process includes:
-
-- Deleting the existing database  
-- Recreating the schema from the current model  
-- Seeding default roles, users, and data  
-
-For production environments, consider using EF Core migrations or migration bundles during deployment.  
-For more information, see [Database Initialisation Strategies for EF Core](https://jasontaylor.dev/ef-core-database-initialisation-strategies).
-
-## Deploy
-
-This template is structured to follow the Azure Developer CLI (azd). You can learn more about `azd` in the [official documentation](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli). To get started:
-
-```bash
-# Log in to Azure
-azd auth login
-
-# Provision and deploy to Azure
-azd up
-```
 
 ## Technologies
 
@@ -115,22 +36,15 @@ azd up
 * [NUnit](https://nunit.org/), [Shoudly](https://docs.shouldly.org/), [Moq](https://github.com/devlooped/moq) & [Respawn](https://github.com/jbogard/Respawn)
 
 ## Versions
-The main branch is now on .NET 9.0. The following previous versions are available:
-
-* [8.0](https://github.com/jasontaylordev/CleanArchitecture/tree/net8.0)
-* [7.0](https://github.com/jasontaylordev/CleanArchitecture/tree/net7.0)
-* [6.0](https://github.com/jasontaylordev/CleanArchitecture/tree/net6.0)
-* [5.0](https://github.com/jasontaylordev/CleanArchitecture/tree/net5.0)
-* [3.1](https://github.com/jasontaylordev/CleanArchitecture/tree/netcore3.1)
+The main branch is now on .NET 9.0. 
 
 ## Learn More
 
-* [Clean Architecture with ASP.NET Core 3.0 (GOTO 2019)](https://youtu.be/dK4Yb6-LxAk)
-* [Clean Architecture with .NET Core: Getting Started](https://jasontaylor.dev/clean-architecture-getting-started/)
+
 
 ## Support
 
-If you are having problems, please let me know by [raising a new issue](https://github.com/jasontaylordev/CleanArchitecture/issues/new/choose).
+If you are having problems, please let me know by [raising a new issue](https://github.com/).
 
 ## License
 
