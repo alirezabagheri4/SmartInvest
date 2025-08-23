@@ -19,7 +19,7 @@ If you find this project useful, please give it a star. Thanks! ⭐
 
 The following prerequisites are required to build and run the solution:
 
-- [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) (latest version)
+- [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) (latest version)
 ```
 
 Once installed, create a new solution using the template. You can choose to use Angular, React, or create a Web API-only solution. Specify the client framework using the `-cf` or `--client-framework` option, and provide the output directory where your project will be created. Here are some examples:
