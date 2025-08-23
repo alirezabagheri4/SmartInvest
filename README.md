@@ -36,7 +36,7 @@ Once installed, create a new solution using the template. You can choose to use 
 * [NUnit](https://nunit.org/), [Shoudly](https://docs.shouldly.org/), [Moq](https://github.com/devlooped/moq) & [Respawn](https://github.com/jbogard/Respawn)
 
 ## Versions
-The main branch is now on .NET 9.0. 
+The main branch is now on .NET 8.0. 
 
 ## Learn More
 
